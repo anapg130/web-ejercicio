@@ -1,0 +1,583 @@
+/* Definición de variables de colores para reutilización */
+:root {
+    --color-primario: #007bff;
+    /* Color principal */
+    --color-secundario: #38B6FF;
+    /* Color secundario */
+    --color-fondo: #ffffff;
+    /* Color de fondo general */
+    --color-texto: #000000;
+    /* Color del texto */
+    --color-fondo-cabecera: #333333;
+    /* Color de fondo de la cabecera */
+    --color-fondo-tabla: #fdbe36;
+}
+
+/* Box-sizing para incluir el borde y el relleno en el cálculo del tamaño */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Reset de márgenes para ciertos elementos */
+body,
+ul,
+ol,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+/* Reset de estilos para listas
+ul, ol {
+    padding: 0;
+    list-style-type: none;
+} */
+
+/* Estilos generales del cuerpo del documento */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Esto evita el desbordamiento horizontal */
+
+}
+
+/* Estilos para encabezados personalizados */
+h2,
+h3 {
+    font-family: 'Tilt Warp', sans-serif;
+}
+
+/* Estilos para imágenes */
+img {
+    max-width: 100%;
+}
+
+/*ESTILOS GENERALES*/
+
+/* Estilos para la capa superior del sitio */
+.capa_superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 10px;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+}
+
+.menu-buscador-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+/* Estilos para los enlaces del menú al pasar el ratón sobre ellos */
+a:hover {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+/* Estilos para el buscador */
+.buscador {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para la capa de la cabecera */
+.capa_cabecera {
+    margin-bottom: 5%;
+    text-align: center;
+    background-color: var(--color-fondo-cabecera);
+    color: #fff;
+    padding: 20px;
+}
+
+.capa_cabecera:hover {
+    background-color: var(--color-secundario);
+}
+
+
+/*ESTILOS PARA LA PÁGINA DE INICIO*/
+
+/* Estilos para la capa principal */
+.capa_principal {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Esto evita el desbordamiento vertical */
+}
+
+
+
+/* Estilos para las secciones 1 y 2 */
+.seccion1,
+.seccion2 {
+    width: 50%;
+    margin-left: 20px;
+    overflow: hidden;
+    /* Esto evita el desbordamiento vertical */
+}
+
+/* Estilos específicos para la sección 1 */
+.seccion1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seccion1 article {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.noticia {
+    text-align: left;
+}
+
+.seccion1 article img {
+    width: 40%;
+    height: auto;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.seccion1 article p {
+    flex: 1;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.seccion1 article button {
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.seccion1 article button:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Estilos para el contenido adicional */
+.contenido-adicional {
+    display: none;
+}
+
+.seccion1 article:hover .contenido-adicional {
+    display: block;
+}
+
+/* Estilos específicos para la sección 2 */
+.seccion2 {
+    width: 500px;
+    height: auto;
+    padding: 40px;
+}
+
+/* Estilos específicos para la sección 2 - Noticia Grande */
+.seccion2 .noticiaGrande {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.seccion2 h2,
+.seccion2 p {
+    text-align: center;
+}
+
+.seccion2 h2 {
+    margin-bottom: 10px;
+}
+
+.seccion2 .noticiaGrande img {
+    margin-top: 30px;
+}
+
+/* Estilos para la capa secundaria */
+.capa_secundaria {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 30px 10px 30px 10px;
+    background-color: #f8f2f2;
+}
+
+.titulo_seccion3 {
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.seccion3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.capa_secundaria .seccion3 img {
+    max-width: 100%;
+    width: 60%;
+    align-items: center;
+}
+
+.capa_secundaria .seccion3 article {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.capa_secundaria .seccion3 h3 {
+    text-align: center;
+    margin: 20px 10px 10px;
+}
+
+.capa_secundaria .seccion3 p {
+    text-align: center;
+    margin: 10px 10px 10px 20px;
+}
+
+/* Estilos para el footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+footer:hover {
+    color: var(--color-secundario);
+}
+
+/* Efectos extras */
+
+/* Rotación de Imagen */
+#imagen-giratoria {
+    transition: transform 0.5s;
+    /* Transición suave de 0.5 segundos */
+}
+
+#imagen-giratoria:hover {
+    transform: rotate(10deg);
+    /* Rotación de 10 grados al pasar el ratón sobre la imagen */
+}
+
+/* Rotación 3D de Imagen */
+#imagen-giratoria2 {
+    transition: transform 0.5s;
+}
+
+#imagen-giratoria2:hover {
+    transform: rotate3d(0.5, 1, 0, 70deg);
+    /* Rotación 3D con el vector (0.5, 1, 0) y 70 grados de ángulo */
+}
+
+/* Escalado de Imagen */
+#imagen-giratoria3 {
+    transition: transform 0.5s;
+}
+
+#imagen-giratoria3:hover {
+    transform: scale(0.9);
+    /* Escalado al 90% al pasar el ratón sobre la imagen */
+}
+
+/* Escalado de Logotipo */
+.logo {
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(0.9);
+    /* Reducción de tamaño al 90% al pasar el ratón sobre el logotipo */
+}
+
+/* Estilos para enlaces y textarea con cursores específicos */
+a {
+    cursor: pointer;
+}
+
+textarea {
+    cursor: text;
+}
+
+
+/*ESTILOS PARA LA PÁGINA DE INFORMACIÓN*/
+
+.capa_principal2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Estilos para la tabla */
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+th:first-child {
+    font-weight: bold;
+}
+
+td:nth-child(1) {
+    font-weight: bold;
+}
+
+th:nth-child(1):hover,
+th:nth-child(2):hover {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+}
+
+th:nth-child(3):hover {
+    background-color: var(--color-fondo-tabla);
+    color: var(--color-fondo);
+}
+
+
+td:nth-child(-n+2):hover {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    font-weight: bold;
+}
+
+td:nth-child(3):hover,
+td:nth-child(4):hover {
+    background-color: var(--color-fondo-tabla);
+    color: var(--color-fondo);
+    font-weight: bold;
+}
+
+/* Estilos para la lista*/
+
+.logo_2info,
+.logo_3info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.logo_3info {
+    background-color: #ffffff;
+    padding: 2%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.logo_2info img {
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.logo_3info img {
+    width: 20%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.lista {
+    background-color: var(--color-secundario);
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.lista>ol>li {
+    font-weight: bold;
+    margin: 20px;
+}
+
+.lista>ol>li>ul>li {
+    font-weight: normal;
+    /* Restablece el peso de la fuente para los li dentro de ul */
+    margin: 6px;
+}
+
+.lista ul {
+    list-style: none;
+    /* Quitamos los marcadores */
+    padding: 0;
+    /* Quitamos el padding por defecto de la lista */
+    margin-left: 10px;
+    /* Separamos la lista de la izquierda */
+}
+
+.lista ul li::before {
+    /* Añadimos contenido antes de cada elemento de la lista */
+    content: "\2611";
+    /* Insertamos el marcador */
+    padding-right: 8px;
+    /* Establecemos el espacio entre las viñetas y el list item */
+    color: rgb(255, 255, 255);
+    /* Coloreamos la viñeta */
+}
+
+/* Estilos para la capa secundaria*/
+
+.capa_secundaria2 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 30px 10px 30px 10px;
+    background-color: #f8f2f2;
+}
+
+.titulo_seccion3_1 {
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.titulo_seccion3_1 p {
+    text-align: center;
+    margin-top: 20px;
+    font: 600;
+    font-style: italic;
+}
+
+.titulo_seccion3_1 h2 {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+/*ESTILOS PARA LA PÁGINA DE CONTACTO*/
+
+/* Estilos para la capa principal*/
+
+.capa_principal3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Estilos para el formulario */
+
+.formulario h2 {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    /* Esto evita el desbordamiento vertical */
+}
+
+label {
+    font-weight: 500;
+    margin: 10px;
+    margin-left: 0;
+}
+
+form button {
+    background-color: var(--color-fondo-cabecera);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+form button:hover {
+    background-color: var(--color-primario);
+}
+
+.capa_principal3 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
